@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Introducción a la programación en R</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Gabriela Mathieu   Escuela de invierno   Sintaxis" />
+    <link href="Sintaxis_files/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="Sintaxis_files/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+    <link href="Sintaxis_files/remark-css-0.0.1/metropolis-fonts.css" rel="stylesheet" />
+    <link href="Sintaxis_files/font-awesome-5.3.1/css/fontawesome-all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="custom.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Introducción a la programación en R<br><br> <img src="img/Rlogo.png" style="width:8.0%" />   <img src="img/RStudio-Logo-Flat.png" style="width:18.0%" />
+### Gabriela Mathieu<br> <span style="font-size: 80%;"> Escuela de invierno <br> Sintaxis<br><br> </span>
+### <img src="img/cc-by-sa.png" title="fig:" />
+
+---
+
+
+# Script
+
+- Un script permite volver a reproducir nuestro análisis o que otra persona lo haga.
+&lt;br&gt;
+--
+
+- Un archivo donde se escribe la sintaxis.
+&lt;br&gt;
+--
+
+- Tendrá una extensión .R 
+&lt;br&gt;
+--
+
+- Es clave comentar el código, los comentarios deben ir precedidos por **#**.
+&lt;br&gt;
+--
+
+- Los comentarios se verán de un color diferente al código, incluso cuando se comenta parte de un código
+
+
+&lt;!-- Es necesario siempre usar comillas para indicar nombres de archivos como en este caso. Tanto las comillas dobles (") como las simples (') sirven. --&gt;
+
+---
+# Scripts
+
+Una práctica extendida en programación es el uso de programas especializados en el control de versiones, como git o subversion. Dicho software existe para poder conservar la historia completa de cambios que van sufriendo los archivos con los que se trabaja y particularmente sirven para coordinar el trabajo entre múltiples desarrolladores en simultáneo (de hecho la mayor parte de los contenidos de este curso se encuentran alojados en un repositorio online).
+
+---
+# ¿Por qué usar un software de control de versiones?
+
+![](porquegit.png)
+
+---
+# ¿Por qué usar un software de control de versiones?
+
+- Permite compartir tus proyectos, facilitando el trabajo colaborativo
+&lt;br&gt;
+--
+
+- Regresar a versiones previas, si encontrás errores o borrás accidentalmente algo.  
+&lt;br&gt;
+--
+
+- Ver los cambios entre diferentes versiones de tu código, análisis o texto.
+&lt;br&gt;
+--
+
+- Permite reportar errores (bugs) o sugerir nuevos aportes (features) a proyectos.
+&lt;br&gt;
+--
+
+- Compartir tus paquetes de R e instalar los que se encuentran en desarrollo con solo dos lineas de código: `install.packages("devtools"); devtools::install_github("username/packagename")`
+
+---
+# Software de control de versiones
+
+- No es un repositorio para tus archivos
+&lt;br&gt;
+--
+
+- Está pensado para archivos de texto plano
+&lt;br&gt;
+--
+
+- Existen varios webservice amigables que permiten guardar proyectos en repositorios remotamente: [gitlab](https://about.gitlab.com/),  [gitHub](https://github.com/) o [bitbucket](https://bitbucket.org/).
+&lt;br&gt;
+--
+
+- Para utilizarlo es necesario: instalar git en tu sistema operativo, crear una cuenta en gitlab y configurar RStudio.
+&lt;br&gt;
+--
+
+- Te recomiendo leer el libro online [Happy with R](http://happygitwithr.com/) 
+
+---
+# Consejos
+
+- La curva de aprendizaje de R al comienzo suele resultar muy empinada. 
+
+- ¿Cómo podemos evitar o superar la frustración?
+  
+  * **Usá** R a diario.
+* **Traducí** a R una sintaxis sencilla de otro programa que conozcas.
+* Recurrí a los **foros** y a la ayuda de R para encontrar las soluciones a los problemas que te surjan: stackoverflow
+* Recurrí a otrxs **usuarixs** de R que conozcas.
+* Prestá atención a los **mensajes** de error y advertencia.
+* **Escribí** tus sintaxis en un script y **comentalas** detalladamente.
+* **Reutilizá** sintaxis existentes.
+
+---
+# Ayuda
+
+
+Usar la ayuda de R 
+
+```r
+?mean
+```
+--
+Usar el buscador de internet (stackoverflow)
+  
+
+---
+# Atajos 
+  
+  <i class="fas  fa-caret-down "></i>
+
+<i class="fas  fa-caret-up "></i>
+
+<i class="fas  fa-exchange-alt "></i>
+
+<i class="fas  fa-greater-than "></i>
+
+<i class="fas  fa-greater-than-equal "></i>
+
+<i class="fas  fa-file-import "></i>
+
+<i class="fas  fa-file-export "></i>
+
+<i class="fas  fa-ban "></i>
+
+<i class="fas  fa-save "></i>
+
+<i class="fas  fa-broom "></i>
+
+&lt;!-- stack-overflow --&gt;
+
+
+&lt;!-- file.copy(from=origen, to=destino) --&gt;
+  &lt;!-- file.remove(origen) --&gt;
+  
+  &lt;!-- unzip(destname, exdir=destino, junkpaths=TRUE) --&gt;
+  
+  
+  &lt;!-- if (dim(e)==2){ --&gt;
+      &lt;!--   stop("es necesario agregar errores nuevos al objeto errores_EP") --&gt;
+      &lt;!-- } --&gt;
+  
+---
+# Sintaxis
+  
+Buenas prácticas...
+
+<i class="fas  fa-thumbs-up "></i> ** Dejar espacios **
+  
+  
+  ```r
+  # :)
+  x &lt;- 10
+  
+  # :(
+  x&lt;-10
+  ```
+--
+  
+  <i class="fas  fa-thumbs-up "></i>** Nombrar los objetos y archivos con sentido **
+  --
+  
+  <i class="fas  fa-thumbs-up "></i> ** Nombres en minúscula **
+  --
+  
+  <i class="fas  fa-thumbs-up "></i> ** Separar términos con punto o guión bajo**
+  --
+  
+  
+---
+# Nombrar objetos
+  
+- letras, números, puntos, guión bajo
+- empieza con letras
+- si empieza con punto debe seguirle una letra
+- R es sensible a mayúsculas y minúsculas
+
+---
+# ver
+  
+  https://www.computerworld.com/article/2497143/business-intelligence-beginner-s-guide-to-r-introduction.html
+
+
+- operación vectorial: vuelve a R un lenguaje potente
+
+---
+# Advertencias y errores
+
+- Mensajes de advertencia **(Warnings)**: no necesariamente hay un error (ejecuta los comandos y solo te advierte de posibles inconvenientes).
+
+- Importa saber qué tipo de objetos son los que estamos trabajando:  no toda función se puede aplicar a cualquier tipo de objeto.
+
+https://www.analyticsvidhya.com/blog/2019/05/beginner-guide-tidyverse-most-powerful-collection-r-packages-data-science/
+
+&lt;!-- --- --&gt;
+&lt;!-- # Operaciones con vectores --&gt;
+
+&lt;!-- - Aritméticas y lógicas --&gt;
+&lt;!-- - subsetting: extraer elementos  --&gt;
+&lt;!-- - coercion: convierte un tipo en otro --&gt;
+
+&lt;!-- ver conversión de letras en números --&gt;
+&lt;!-- --- --&gt;
+&lt;!-- # Factor --&gt;
+
+&lt;!-- Caso especial de vector para guardar valores nominales o categóricos --&gt;
+
+---
+# Números especiales
+
+- Infinito: -Inf, Inf
+- Nan: not a number. Valor que no se puede representar como un número real
+- NA: not available. No disponible
+
+
+```r
+# Hay que tener un poco de cuidado siempre en la sintaxis, sobre todo cuando
+# uno de los extremos es el resultado de una operación, por ejemplo:
+0:10 - 1
+```
+
+```
+##  [1] -1  0  1  2  3  4  5  6  7  8  9
+```
+
+```r
+# no es lo mismo que
+0:(10 - 1)
+```
+
+```
+##  [1] 0 1 2 3 4 5 6 7 8 9
+```
+
+```r
+# El orden en que se evalúan los distintos operadores hace la diferencia. Aquí:
+# ":" va primero que la resta ("-"), pero los paréntesis "()" preceden a ambos
+# (ver "Orden de precedencia" para más detalles).
+```
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
+
+<script>
+(function() {
+  var i, text, code, codes = document.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+})();
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

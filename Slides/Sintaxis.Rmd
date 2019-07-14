@@ -1,0 +1,256 @@
+---
+title: "Introducción a la programación en R<br><br>
+![](img/Rlogo.png){ width=8% } &nbsp; ![](img/RStudio-Logo-Flat.png){ width=18% }"
+author: "Gabriela Mathieu<br>
+<span style = 'font-size: 80%;'>
+Escuela de invierno <br>
+Sintaxis<br><br>
+</span>"
+date: '
+![](img/cc-by-sa.png)'
+
+output: 
+  xaringan::moon_reader:
+    css: [default, default-fonts, rladies-fonts, custom.css]
+    nature:
+      highlightStyle: github
+      highlightLines: true
+---
+
+# Script
+
+- Un script permite volver a reproducir nuestro análisis o que otra persona lo haga.
+<br>
+--
+
+- Un archivo donde se escribe la sintaxis.
+<br>
+--
+
+- Tendrá una extensión .R 
+<br>
+--
+
+- Es clave comentar el código, los comentarios deben ir precedidos por **#**.
+<br>
+--
+
+- Los comentarios se verán de un color diferente al código, incluso cuando se comenta parte de un código
+
+
+<!-- Es necesario siempre usar comillas para indicar nombres de archivos como en este caso. Tanto las comillas dobles (") como las simples (') sirven. -->
+
+---
+# Scripts
+
+Una práctica extendida en programación es el uso de programas especializados en el control de versiones, como git o subversion. Dicho software existe para poder conservar la historia completa de cambios que van sufriendo los archivos con los que se trabaja y particularmente sirven para coordinar el trabajo entre múltiples desarrolladores en simultáneo (de hecho la mayor parte de los contenidos de este curso se encuentran alojados en un repositorio online).
+
+---
+# ¿Por qué usar un software de control de versiones?
+
+![](porquegit.png)
+
+---
+# ¿Por qué usar un software de control de versiones?
+
+- Permite compartir tus proyectos, facilitando el trabajo colaborativo
+<br>
+--
+
+- Regresar a versiones previas, si encontrás errores o borrás accidentalmente algo.  
+<br>
+--
+
+- Ver los cambios entre diferentes versiones de tu código, análisis o texto.
+<br>
+--
+
+- Permite reportar errores (bugs) o sugerir nuevos aportes (features) a proyectos.
+<br>
+--
+
+- Compartir tus paquetes de R e instalar los que se encuentran en desarrollo con solo dos lineas de código: `install.packages("devtools"); devtools::install_github("username/packagename")`
+
+---
+# Software de control de versiones
+
+- No es un repositorio para tus archivos
+<br>
+--
+
+- Está pensado para archivos de texto plano
+<br>
+--
+
+- Existen varios webservice amigables que permiten guardar proyectos en repositorios remotamente: [gitlab](https://about.gitlab.com/),  [gitHub](https://github.com/) o [bitbucket](https://bitbucket.org/).
+<br>
+--
+
+- Para utilizarlo es necesario: instalar git en tu sistema operativo, crear una cuenta en gitlab y configurar RStudio.
+<br>
+--
+
+- Te recomiendo leer el libro online [Happy with R](http://happygitwithr.com/) 
+
+---
+# Consejos
+
+- La curva de aprendizaje de R al comienzo suele resultar muy empinada. 
+
+- ¿Cómo podemos evitar o superar la frustración?
+  
+  * **Usá** R a diario.
+* **Traducí** a R una sintaxis sencilla de otro programa que conozcas.
+* Recurrí a los **foros** y a la ayuda de R para encontrar las soluciones a los problemas que te surjan: stackoverflow
+* Recurrí a otrxs **usuarixs** de R que conozcas.
+* Prestá atención a los **mensajes** de error y advertencia.
+* **Escribí** tus sintaxis en un script y **comentalas** detalladamente.
+* **Reutilizá** sintaxis existentes.
+
+---
+# Ayuda
+
+
+Usar la ayuda de R 
+```{r}
+?mean
+```
+--
+Usar el buscador de internet (stackoverflow)
+  
+
+---
+# Atajos 
+  
+  `r icon::fa("caret-down")`
+
+`r icon::fa("caret-up")`
+
+`r icon::fa("exchange-alt")`
+
+`r icon::fa("greater-than")`
+
+`r icon::fa("greater-than-equal")`
+
+`r icon::fa("file-import")`
+
+`r icon::fa("file-export")`
+
+`r icon::fa("ban")`
+
+`r icon::fa("save")`
+
+`r icon::fa("broom")`
+
+<!-- stack-overflow -->
+
+
+<!-- file.copy(from=origen, to=destino) -->
+  <!-- file.remove(origen) -->
+  
+  <!-- unzip(destname, exdir=destino, junkpaths=TRUE) -->
+  
+  
+  <!-- if (dim(e)==2){ -->
+      <!--   stop("es necesario agregar errores nuevos al objeto errores_EP") -->
+      <!-- } -->
+  
+---
+# Sintaxis
+  
+Buenas prácticas...
+
+`r icon::fa("thumbs-up")` ** Dejar espacios **
+  
+  ```{r}
+# :)
+x <- 10
+
+# :(
+x<-10
+```
+--
+  
+  `r icon::fa("thumbs-up")`** Nombrar los objetos y archivos con sentido **
+  --
+  
+  `r icon::fa("thumbs-up")` ** Nombres en minúscula **
+  --
+  
+  `r icon::fa("thumbs-up")` ** Separar términos con punto o guión bajo**
+  --
+  
+  
+---
+# Nombrar objetos
+  
+- letras, números, puntos, guión bajo
+- empieza con letras
+- si empieza con punto debe seguirle una letra
+- R es sensible a mayúsculas y minúsculas
+
+---
+# ver
+  
+  https://www.computerworld.com/article/2497143/business-intelligence-beginner-s-guide-to-r-introduction.html
+
+
+- operación vectorial: vuelve a R un lenguaje potente
+
+---
+# Advertencias y errores
+
+- Mensajes de advertencia **(Warnings)**: no necesariamente hay un error (ejecuta los comandos y solo te advierte de posibles inconvenientes).
+
+- Importa saber qué tipo de objetos son los que estamos trabajando:  no toda función se puede aplicar a cualquier tipo de objeto.
+
+https://www.analyticsvidhya.com/blog/2019/05/beginner-guide-tidyverse-most-powerful-collection-r-packages-data-science/
+
+<!-- --- -->
+<!-- # Operaciones con vectores -->
+
+<!-- - Aritméticas y lógicas -->
+<!-- - subsetting: extraer elementos  -->
+<!-- - coercion: convierte un tipo en otro -->
+
+<!-- ver conversión de letras en números -->
+<!-- --- -->
+<!-- # Factor -->
+
+<!-- Caso especial de vector para guardar valores nominales o categóricos -->
+
+---
+# Números especiales
+
+- Infinito: -Inf, Inf
+- Nan: not a number. Valor que no se puede representar como un número real
+- NA: not available. No disponible
+
+```{r}
+# Hay que tener un poco de cuidado siempre en la sintaxis, sobre todo cuando
+# uno de los extremos es el resultado de una operación, por ejemplo:
+0:10 - 1
+# no es lo mismo que
+0:(10 - 1)
+# El orden en que se evalúan los distintos operadores hace la diferencia. Aquí:
+# ":" va primero que la resta ("-"), pero los paréntesis "()" preceden a ambos
+# (ver "Orden de precedencia" para más detalles).
+
+```
+
+---
+# lógica base vs. tidyverse
+
+*base*
+```
+mtcars$pounds <- mt$wt * 1000
+mtcars[["pounds"]] <- mtcars[["wt"]] / 1000
+mtcars[, "pounds"] <- mtcars[, "wt"] / 1000
+```
+
+*tidyverse*
+```
+mtcars <- mtcars %>%
+mutate(pounds = wt / 1000)
+```
+
