@@ -28,3 +28,6 @@ Este curso pretende ser una introducción al lenguaje R; actualmente R es el pri
 - Visualización de datos (gráficos y mapas).
 - Informes reproducibles (.Rmd).
 
+### Presentaciones
+
+[Taller 1](https://github.com/calcita/r-programming/blob/master/Taller1.1.html)
