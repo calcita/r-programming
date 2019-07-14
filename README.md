@@ -1,37 +1,30 @@
-## Welcome to GitHub Pages
+## Introducción a la programación en R
 
-You can use the [editor on GitHub](https://github.com/calcita/r-programming/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+### Objetivo
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Este curso pretende ser una introducción al lenguaje R; actualmente R es el principal programa utilizado en el área de estadística y está muy bien posicionado en diferentes disciplinas asociadas a la ciencia de datos, el ánalisis y la visualización. El curso tendrá una gran énfasis práctico y brindará herramientas para que cada estudiante sea capaz de enfrentarse a un conjunto de datos reales logrando procesar dichos datos, analizarlos y presentar los resultados.
 
-### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Descripción
 
-```markdown
-Syntax highlighted code block
+**Módulo 1**
 
-# Header 1
-## Header 2
-### Header 3
+- Ejemplos de usos de R en diferentes áreas.
+- Características de R. Terminal de R y RStudio.
+- Sintaxis de R (.R). Trabajo en proyecto (.Rproj).
+- Paquetes y funciones. Usos de las ayudas y foros.
 
-- Bulleted
-- List
+**Módulo 2**
 
-1. Numbered
-2. List
+- Objetos: vectores, matrices, marco de datos y listas.
+- Operadores: aritméticos, relacionales, lógicos, especiales.
+- Estructuras repetitivas y condicionales.
+- Manipulación de objetos
+- Importación y exportación de archivos.
 
-**Bold** and _Italic_ and `Code` text
+**Módulo 3**
 
-[Link](url) and ![Image](src)
-```
+- Análisis estadístico.
+- Visualización de datos (gráficos y mapas).
+- Informes reproducibles (.Rmd).
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/calcita/r-programming/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
