@@ -1,7 +1,7 @@
 baseURL = "https://r-intro-course.netlify.app/"
 title = "Hugo Themes"
 author = "He Yeshuang"
-copyright = "Copyright © 2008–2019"
+copyright = ""
 languageCode = "en"
 DefaultContentLanguage = "en"
 hasCJKLanguage=true
