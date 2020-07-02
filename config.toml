@@ -1,14 +1,14 @@
 baseURL = "https://r-intro-course.netlify.app/"
-title = "Hugo Themes"
-author = "He Yeshuang"
+title = "Intro R"
+author = "Gabriela Mathieu"
 copyright = ""
 languageCode = "en"
 DefaultContentLanguage = "en"
 hasCJKLanguage=true
 enableInlineShortcodes = true
 footnoteReturnLinkContents = "^"
-disqusShortname = "YOURSHORTNAME"
-googleAnalytics = "UA-FAKE"
+disqusShortname = ""
+googleAnalytics = ""
 theme = "hugo-theme-tokiwa"
 
 [markup.goldmark.renderer]
@@ -16,7 +16,7 @@ unsafe= true
 
 [params]
 description = """
-Tokiwa-iro is the theme color of this site.
+Presentaciones del curso Introducción a la programación en R
 """
 favicon = "img/favicon-32x32.png"
 math = true # for introducing $KaTEX$
@@ -27,10 +27,10 @@ bannerFont = "fonts/exampleFont"
 [menu]
 # Shown in the side menu.
   [[menu.main]]
-    name = "Posts"
+    name = "Slides"
     weight = 1
-    identifier = "post"
-    url = "/post/"
+    identifier = "slides"
+    url = "/slides/"
   [[menu.main]]
     name = "Tags"
     url = "/tags/"
@@ -53,13 +53,9 @@ category = "categories"
 tag = "tags"
 series = "series"
 [social]
-instagram="http://example.com/"
-bilibili="http://example.com/"
-weibo="http://example.com/"
-zhihu="http://example.com/"
-twitter="http://twitter.com/"
-gitlab="http://gitlab.com/"
-mail="mailto:anon@example.com"
-youtube="http://youtube.com/"
-github="http://github.com/"
+twitter="http://twitter.com/calcita3"
+gitlab="http://gitlab.com/calcita"
+github="http://github.com/calcita"
+mail="mailto:gmathieu@gmx.com"
+
 # any icon in layouts/partials/svg can be used by the name without the "-line.svg"
