@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <title>Intro a la programación en</title>
+    <meta charset="utf-8" />
+    <link href="taller1_parte1_files/font-awesome/css/fontawesome-all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Intro a la programación en
+## Escuela de Invierno - Julio 2020
+
+---
+
+&lt;!-- https://raw.githubusercontent.com/EvaMaeRey/flipbookr/master/inst/rmarkdown/templates/template-name/skeleton/skeleton.Rmd --&gt;
+&lt;!-- https://github.com/mine-cetinkaya-rundel/teach-r-online/blob/master/01-cloud/01-cloud.Rmd --&gt;
+&lt;!-- https://mine-cetinkaya-rundel.github.io/teach-r-online/01-cloud/01-cloud.html#13 --&gt;
+&lt;!-- https://github.com/hadley/emo --&gt;
+&lt;!-- https://arm.rbind.io/slides/xaringan.html#118 --&gt;
+&lt;!-- https://arm.rbind.io/slides/xaringan.html#120 --&gt;
+
+
+
+
+
+class: hide-logo
+# Características del curso
+
+&lt;!-- use the trailing comment #&lt;&lt; to highlight specific lines of the code --&gt;
+&lt;!-- https://zhiiiyang.github.io/XaringanTutorial/#35 --&gt;
+&lt;!-- https://zhiiiyang.github.io/XaringanTutorial/#47 --&gt;
+
+
+
+.left-column[
+<i class="fas  fa-laptop-code fa-2x " style="color:#43a2ca;"></i> 
+&lt;br&gt;
+
+<i class="fas  fa-link fa-2x " style="color:#43a2ca;"></i> 
+&lt;br&gt;
+
+<i class="fas  fa-question fa-2x " style="color:#43a2ca;"></i> 
+&lt;br&gt;
+
+<i class="fas  fa-file-alt fa-2x " style="color:#43a2ca;"></i> 
+&lt;br&gt;
+
+<i class="fas  fa-home fa-2x " style="color:#43a2ca;"></i> 
+&lt;br&gt;
+
+<i class="fas  fa-comments fa-2x " style="color:#43a2ca;"></i> 
+]
+.right-column[
+Espacio "presencial": &lt;span style=" font-weight: bold;    border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #b3e2cd !important;" &gt;16 horas&lt;/span&gt; de clases teóricas/prácticas
+&lt;br&gt;
+
+&lt;a href="https://webasignatura.ucu.edu.uy/course/view.php?id=6789"&gt;Espacio virtual&lt;/a&gt;
+&lt;br&gt;
+
+Participar durante la clase a través del &lt;span style=" font-weight: bold;    border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #b3e2cd !important;" &gt;chat&lt;/span&gt; de zoom o &lt;span style=" font-weight: bold;    border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #b3e2cd !important;" &gt;pedir la palabra&lt;/span&gt;.
+&lt;br&gt;&lt;br&gt;
+
+&lt;span style=" font-weight: bold;    border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #b3e2cd !important;" &gt;Examen&lt;/span&gt; opcional
+&lt;br&gt;&lt;br&gt;
+
+&lt;span style=" font-weight: bold;    border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #b3e2cd !important;" &gt;Dedicación:&lt;/span&gt; durante el curso y después ... es la .red[clave]
+&lt;br&gt;
+
+Comunicación: &lt;span style=" font-weight: bold;    border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #b3e2cd !important;" &gt;foro y mail&lt;/span&gt;
+]
+
+&lt;!-- --- --&gt;
+&lt;!-- # Talleres  --&gt;
+
+
+&lt;!-- - <i class="fas  fa-microphone " style="color:#43a2ca;"></i>  micrófono apagado. --&gt;
+&lt;!-- -- --&gt;
+
+&lt;!-- - <i class="fas  fa-question " style="color:#43a2ca;"></i>  Escribir por chat o pedir la palabra  --&gt;
+&lt;!-- -- --&gt;
+
+&lt;!-- -  Es importante que participen, pregunten y respondan. No hay preguntas tontas! --&gt;
+
+&lt;!-- -  Se agradece usen su nombre y apellido y una foto de perfil --&gt;
+&lt;!-- -- --&gt;
+
+&lt;!-- -  <i class="fas  fa-users " style="color:#43a2ca;"></i>  Serán organizados en grupos aleatorios durante los ejercicios de modo que puedan ayudarse entre ustedes. --&gt;
+&lt;!-- -- --&gt;
+
+&lt;!-- -  <i class="fas  fa-video " style="color:#43a2ca;"></i> Cada taller será grabado y se publicará el video posteriormente. --&gt;
+
+
+&lt;!-- - Todos los materiales del curso se pueden compartir y modificar para --&gt;
+&lt;!-- futuros usos manteniendo su licencia CC-BY-SA  --&gt;
+
+
+---
+class: hide-logo
+# ¿Qué haremos hoy?
+
+- &lt;span style=" font-weight: bold;    border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #b3e2cd !important;" &gt;¿Qué es R?&lt;/span&gt;
+&lt;br&gt;
+--
+
+- Usar R como  &lt;span style=" font-weight: bold;    border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #b3e2cd !important;" &gt;calculadora&lt;/span&gt;
+&lt;br&gt;
+--
+
+- Conceptos básicos: &lt;span style=" font-weight: bold;    border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #b3e2cd !important;" &gt;objetos y clase de objetos&lt;/span&gt;
+&lt;br&gt;&lt;br&gt;
+--
+
+-  &lt;span style=" font-weight: bold;    border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #b3e2cd !important;" &gt;Vectores&lt;/span&gt;: numéricos, lógicos y de caracteres
+&lt;br&gt;
+--
+
+-  &lt;span style=" font-weight: bold;    border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #b3e2cd !important;" &gt;Funciones&lt;/span&gt; y &lt;span style=" font-weight: bold;    border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #b3e2cd !important;" &gt;operadores&lt;/span&gt;
+&lt;br&gt;
+--
+
+- Marco de datos (&lt;span style=" font-weight: bold;    border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #b3e2cd !important;" &gt;data frame&lt;/span&gt;)
+&lt;br&gt;&lt;br&gt;
+--
+
+- &lt;span style=" font-weight: bold;    border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #b3e2cd !important;" &gt;Importar&lt;/span&gt; un archivo csv
+&lt;br&gt;
+--
+
+-  &lt;span style=" font-weight: bold;    border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #b3e2cd !important;" &gt;Explorar&lt;/span&gt; un conjunto de datos (data frame)
+&lt;br&gt;&lt;br&gt;
+--
+
+- Extensiones a R base: &lt;span style=" font-weight: bold;    border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #b3e2cd !important;" &gt;paquetes&lt;/span&gt;
+&lt;br&gt;
+--
+
+- Paquete &lt;span style=" font-weight: bold;    border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #b3e2cd !important;" &gt;tidyverse&lt;/span&gt;
+&lt;br&gt;&lt;br&gt;
+--
+
+- ¿Qué es un &lt;span style=" font-weight: bold;    border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #b3e2cd !important;" &gt;script&lt;/span&gt;?
+&lt;br&gt;
+--
+
+- Alternaremos entre &lt;span style=" font-weight: bold;    border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #b3e2cd !important;" &gt;ejemplos&lt;/span&gt; y &lt;span style=" font-weight: bold;    border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #b3e2cd !important;" &gt;ejercicios&lt;/span&gt;
+
+---
+class: hide-logo
+# ¿Qué es <i class="fab  fa-r-project " style="color:#384CB7;"></i>?
+
+.left-column[
+
+<i class="fas  fa-chart-area fa-2x " style="color:#756bb1;"></i> &lt;br&gt;
+
+<i class="fas  fa-code fa-2x " style="color:#2c7fb8;"></i> &lt;br&gt;
+
+<i class="fab  fa-creative-commons-nc fa-2x " style="color:#636363;"></i> &lt;br&gt; 
+
+<i class="fab  fa-osi fa-2x " style="color:#31a354;"></i> &lt;br&gt;
+
+<i class="fab  fa-github fa-2x "></i> &lt;br&gt;
+
+<i class="fab  fa-meetup fa-2x " style="color:#de2d26;"></i>
+]
+
+.rigth-column[
+
+&lt;span style=" font-weight: bold;    border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #b3e2cd !important;" &gt;Programa estadístico&lt;/span&gt;: análisis
+&lt;br&gt;&lt;br&gt;
+
+&lt;span style=" font-weight: bold;    border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #b3e2cd !important;" &gt;Lenguaje&lt;/span&gt; de programación: sintaxis
+&lt;br&gt;&lt;br&gt;
+
+Software &lt;span style=" font-weight: bold;    border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #b3e2cd !important;" &gt;gratuito&lt;/span&gt;, se desacarga desde [CRAN](http://www.r-project.org).
+&lt;br&gt;&lt;br&gt;
+
+Software &lt;span style=" font-weight: bold;    border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #b3e2cd !important;" &gt;libre&lt;/span&gt;: licencia [GNU](https://es.wikipedia.org/wiki/GNU_General_Public_License). Libertad de uso, modificación y  distribución.
+&lt;br&gt;
+
+&lt;span style=" font-weight: bold;    border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #b3e2cd !important;" &gt;Comunidad&lt;/span&gt; mundial: lo usa y mejora. Casi 20.000 paquetes en [CRAN]((https://cran.r-project.org/web/packages/)) y [github](https://github.com/)
+&lt;br&gt;
+
+Comunidad en Uruguay: [meetup R-Ladies](https://www.meetup.com/es-ES/rladies-montevideo/) y [meetup GURU](https://www.meetup.com/es-ES/GURU-mvd/)
+]
+
+---
+# ¿Quiénes usan/usamos R?
+
+&lt;!-- [Visualizador](https://benubah.github.io/r-community-explorer/rugs-cluster-map.html) RUGs y R-Ladies --&gt;
+
+&lt;iframe src="https://benubah.github.io/r-community-explorer/rugs-cluster-map.html"  width="1200" height="520" frameBorder="0"&gt;&lt;/iframe&gt;
+
+&lt;!-- https://rpubs.com/anish20/StackOverflowDeveloperSurveyAnalysis --&gt;
+
+---
+class: inverse, center, middle
+# Intro R
+&lt;!-- &lt;img src="http://bit.ly/wiki-toddy" width="15%" align="right" /&gt; --&gt;
+
+&lt;!-- .left[words] --&gt;
+---
+class: hide-logo 
+# Curva de aprendizaje
+
+Al inicio suele ser empinada
+&lt;center&gt;
+&lt;img src="https://media.giphy.com/media/xT5LMNsvvJzIB77S0g/source.gif"/&gt;
+&lt;/center&gt;
+&lt;!-- ![Alt Text](https://media.giphy.com/media/xT5LMNsvvJzIB77S0g/source.gif) --&gt;
+
+---
+class: hide-logo
+# ...
+
+&lt;center&gt;
+&lt;img src="https://media.giphy.com/media/3o6MbtpwBH9tlVMg2k/source.gif"/&gt;
+&lt;/center&gt;
+
+---
+class: hide-logo
+# Ayuda
+
+El curso busca guiarlos por un camino menos empinado
+
+&lt;center&gt;
+&lt;img src="https://media.giphy.com/media/l2Jee8WOulPSBZwaI/source.gif"/&gt;
+&lt;/center&gt;
+
+&lt;!-- Introducción al lenguaje R mediante RStudio --&gt;
+
+&lt;!-- Manejar un gran conjunto de funciones  --&gt;
+
+&lt;!-- Aprender R a través de la lógica tidyverse para lograr rápidamente: --&gt;
+
+&lt;!-- -- --&gt;
+
+&lt;!-- Trabajar con datos reales e interesantes. --&gt;
+
+&lt;!-- -- --&gt;
+
+&lt;!-- Crea visualizaciones atractivas e informativas. --&gt;
+
+&lt;!-- -- --&gt;
+
+&lt;!-- Presentar los resultados de manera sencilla y potente. --&gt;
+
+
+---
+class: hide-logo
+# <i class="fas  fa-greater-than "></i> Abrimos RStudio
+
+
+![](img/terminal.gif)
+
+---
+class: hide-logo
+# ¿Cómo interactuamos con R?
+
+.pull-left[
+- Al abrir RStudio vemos el panel llamado "Console" que es la &lt;span style=" font-weight: bold;    border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #b3e2cd !important;" &gt;consola&lt;/span&gt; de R.
+
+- R inicia con un &lt;span style=" font-weight: bold;    border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #b3e2cd !important;" &gt;mensaje&lt;/span&gt; de apertura que indica entre otras cosas, la versión.
+
+]
+
+.pull-right[
+- Luego del mensaje de apertura, el 'prompt', &lt;span style=" font-weight: bold;    border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #b3e2cd !important;" &gt;&amp;gt;&lt;/span&gt;, indica que R está listo. 
+
+![](img/console.png)
+
+&lt;!-- ![](img/coding.gif) --&gt;
+]
+---
+class: hide-logo
+# ¿Cómo interactuamos con R?
+
+- Es un lenguaje de programación: escribimos &lt;span style=" font-weight: bold;    border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #b3e2cd !important;" &gt;código&lt;/span&gt; en la consola para darle órdenes a R.
+
+- Las &lt;span style=" font-weight: bold;    border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #b3e2cd !important;" &gt;órdenes&lt;/span&gt; elementales de R consisten en expresiones o asignaciones. 
+--
+
+- Una &lt;span style=" font-weight: bold;    border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #b3e2cd !important;" &gt;expresión&lt;/span&gt;, se evalúa, se imprime el resultado y su valor se pierde. 
+
+```r
+*2 + 3
+```
+
+```
+[1] 5
+```
+--
+
+---
+class: hide-logo
+# ¿Cómo interactuamos con R?
+
+
+- Una &lt;span style=" font-weight: bold;    border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #b3e2cd !important;" &gt;asignación&lt;/span&gt;, crea un objeto y no se imprime el resultado.
+
+
+
+&lt;code class ='r hljs remark-code'&gt;x &lt;span style='background-color:#ffff7f'&gt;&lt;-&lt;/span&gt; 2 + 3&lt;/code&gt;
+
+--
+
+- Una asignación se hace utilizando el símbolo: <i class="fas  fa-less-than "></i><i class="fas  fa-minus "></i> 
+&lt;br&gt;
+--
+
+- Otros programas estadísticos muestran directamente los resultados, R los guarda en un &lt;span style=" font-weight: bold;    border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #b3e2cd !important;" &gt;objeto&lt;/span&gt;. 
+&lt;br&gt;
+--
+
+- Ejecuto el nombre del objeto para imprimir/mostrar el resultado
+
+```r
+x 
+```
+
+```
+[1] 5
+```
+
+---
+class: hide-logo
+# Operadores aritméticos
+.pull-left[
+
+- &lt;span style=" font-weight: bold;    border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #b3e2cd !important;" &gt;Suma&lt;/span&gt;
+
+
+
+
+&lt;code class ='r hljs remark-code'&gt;18 &lt;span style='background-color:#ffff7f'&gt;+&lt;/span&gt; 9&lt;/code&gt;
+
+```
+
+[1] 27
+
+```
+
+
+- &lt;span style=" font-weight: bold;    border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #b3e2cd !important;" &gt;Resta&lt;/span&gt;
+
+
+
+&lt;code class ='r hljs remark-code'&gt;18 &lt;span style='background-color:#ffff7f'&gt;-&lt;/span&gt; 9&lt;/code&gt;
+
+```
+
+[1] 9
+
+```
+
+
+]
+.pull-right[
+
+- &lt;span style=" font-weight: bold;    border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #b3e2cd !important;" &gt;Multiplicación&lt;/span&gt;
+
+
+
+
+&lt;code class ='r hljs remark-code'&gt;18 &lt;span style='background-color:#ffff7f'&gt;*&lt;/span&gt; 9&lt;/code&gt;
+
+```
+
+[1] 162
+
+```
+
+- &lt;span style=" font-weight: bold;    border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #b3e2cd !important;" &gt;División&lt;/span&gt;
+
+
+
+&lt;code class ='r hljs remark-code'&gt;18 &lt;span style='background-color:#ffff7f'&gt;/&lt;/span&gt; 9&lt;/code&gt;
+
+```
+
+[1] 2
+
+```
+]
+
+---
+class: hide-logo
+# Ejercicio (3')
+
+.pull-left[
+
+- ¿Cuánto gasté en el super? 
+
+- ¿Cuánto gasté en pesos uruguayos?
+
+- Escribe la cuenta en la consola de R
+]
+&lt;!-- &lt;img src="https://media.giphy.com/media/l2JefdrXcqBgL3rqM/giphy-downsized.gif/&gt; --&gt;
+
+.pull-right[
+&lt;img src="img/ticket.png" width="50%" /&gt;
+&lt;!-- ![](img/ticket.png) --&gt;
+
+]
+
+---
+class: hide-logo
+# Calculadora
+
+- Además de los operadores aritméticos, trae &lt;span style=" font-weight: bold;    border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #b3e2cd !important;" &gt;funciones matemáticas&lt;/span&gt;
+
+
+```r
+# valor absoluto
+abs(-1)
+```
+
+```
+[1] 1
+```
+--
+
+--
+
+```r
+# exponencial
+exp(0)
+```
+
+```
+[1] 1
+```
+--
+
+```r
+# raíz cuadrada
+sqrt(9)
+```
+
+```
+[1] 3
+```
+
+---
+class: hide-logo
+# Funciones
+
+- Una  función  es un  conjunto  de  &lt;span style=" font-weight: bold;    border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #b3e2cd !important;" &gt;instrucciones&lt;/span&gt; que  operan  sobre unos &lt;span style=" font-weight: bold;    border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #b3e2cd !important;" &gt;argumentos&lt;/span&gt; y producen un &lt;span style=" font-weight: bold;    border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #b3e2cd !important;" &gt;resultado&lt;/span&gt;.
+&lt;br&gt;&lt;br&gt;
+--
+
+- Una función esconde líneas de código que permite reutilizarlo una y otra vez.
+&lt;br&gt;&lt;br&gt;
+--
+
+- Las funciones tienen &lt;span style=" font-weight: bold;    border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #b3e2cd !important;" &gt;nombres&lt;/span&gt; descriptivos -en inglés- y se acompañan de &lt;span style=" font-weight: bold;    border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #b3e2cd !important;" &gt;paréntesis curvos&lt;/span&gt;. Por ejemplo, &lt;span style=" font-weight: bold;    border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #b3e2cd !important;" &gt;sqrt()&lt;/span&gt; es la abreviación de square root (raíz cuadrada)
+&lt;br&gt;&lt;br&gt;
+--
+
+- Dentro de los paréntesis se definen los valores de sus argumentos:  &lt;span style=" font-weight: bold;    border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #b3e2cd !important;" &gt;sqrt(9)&lt;/span&gt;
+&lt;br&gt;&lt;br&gt;
+--
+
+- La mayoría tiene al menos un argumento obligatorio y el resto con valores por defecto. Usa la &lt;span style=" font-weight: bold;    border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #b3e2cd !important;" &gt;ayuda&lt;/span&gt; de R para saber qué hace una función:
+
+
+```r
+?sqrt 
+help("sqrt")
+```
+
+---
+class: inverse, center, middle
+# RStudio
+
+---
+class: hide-logo
+# [RStudio](https://www.rstudio.com/)
+&lt;!-- (IDE -integrated development environment-)  entorno de desarrollo integrado --&gt;
+
+![](https://github.com/calcita/Curso-rECH/blob/master/images/RStudio_logo_flat.png)
+
+---
+class: hide-logo
+# Ventanas de RStudio
+
+&lt;!-- ![](img/panels2.png)  --&gt;
+
+&lt;img src="img/panels2.png" width="120%" /&gt;
+
+&lt;svg style="height:0.8em;top:.04em;position:relative;fill:#43a2ca;" viewBox="0 0 512 512"&gt;&lt;path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/&gt;&lt;/svg&gt; [Cheatsheet](https://resources.rstudio.com/the-essentials-of-data-science/rstudio-ide)
+
+
+&lt;!-- https://github.com/rstudio/hex-stickers/tree/master/PNG --&gt;
+&lt;!-- https://stackoverflow.com/questions/53549662/how-can-i-add-a-fontawesome-icon-to-a-table-in-rmarkdown --&gt;
+---
+# Script
+
+![](img/newscript.gif)
+
+---
+# Script
+
+- Un archivo donde se &lt;span style=" font-weight: bold;    border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #b3e2cd !important;" &gt;escribe&lt;/span&gt; la sintaxis (el código) y luego se &lt;span style=" font-weight: bold;    border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #b3e2cd !important;" &gt;envía&lt;/span&gt; a la consola.
+&lt;br&gt;&lt;br&gt;
+--
+
+- Un script permite &lt;span style=" font-weight: bold;    border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #b3e2cd !important;" &gt;reproducir&lt;/span&gt; nuestro análisis o que otra persona lo haga.
+&lt;br&gt;&lt;br&gt;
+--
+
+- Tendrá una extensión &lt;span style=" font-weight: bold;    border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #b3e2cd !important;" &gt;.R&lt;/span&gt; y al hacer doble click sobre el archivo se abre RStudio.
+&lt;br&gt;&lt;br&gt;
+--
+
+- Es clave &lt;span style=" font-weight: bold;    border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #b3e2cd !important;" &gt;comentar&lt;/span&gt; el código, los comentarios deben ir precedidos por &lt;span style=" font-weight: bold;    border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #b3e2cd !important;" &gt;#&lt;/span&gt;.
+&lt;br&gt;&lt;br&gt;
+--
+
+- Los comentarios se verán de un color diferente al código, incluso cuando se comenta parte de un código.
+&lt;br&gt;&lt;br&gt;
+--
+
+- Un comentario se envía a la consola pero &lt;span style=" font-weight: bold;    border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #b3e2cd !important;" &gt;no se ejecuta&lt;/span&gt; nada. 
+
+---
+# Autocompleta código
+
+La ventana de script  &lt;span style=" font-weight: bold;    border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #b3e2cd !important;" &gt;colorea y autocompleta&lt;/span&gt; código. Muestra el  &lt;span style=" font-weight: bold;    border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #b3e2cd !important;" &gt;help&lt;/span&gt;  de la función.
+
+![](img/colorea.gif)
+
+---
+# Comentarios
+
+![](img/comentarios.gif)
+&lt;!-- --- --&gt;
+&lt;!-- # Proyecto  --&gt;
+
+&lt;!-- Permite trabajar en proyecto (.Rproj)  --&gt;
+
+&lt;!-- ![](img/rproj.png) --&gt;
+
+
+&lt;!-- --- --&gt;
+&lt;!-- # git --&gt;
+
+&lt;!-- Permite conexión a git para control de versiones   --&gt;
+&lt;!-- &lt;br&gt;&lt;br&gt;&lt;br&gt; --&gt;
+
+&lt;!-- --- --&gt;
+&lt;!-- # Web, documentos, libros, aplicaciones --&gt;
+
+&lt;!-- Creación de libros, webs, documentos, visualizadores, etc.  --&gt;
+
+&lt;!-- ```{r out.width = "60px" ,echo=FALSE} --&gt;
+&lt;!-- knitr::include_graphics("https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/shiny.png") --&gt;
+&lt;!-- knitr::include_graphics("https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/knitr.png") --&gt;
+&lt;!-- knitr::include_graphics("https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/rmarkdown.png") --&gt;
+&lt;!-- knitr::include_graphics("https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/plumber-female.png") --&gt;
+&lt;!-- knitr::include_graphics("https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/blogdown.png") --&gt;
+&lt;!-- knitr::include_graphics("https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/bookdown.png") --&gt;
+&lt;!-- knitr::include_graphics("https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/flexdashboard.png") --&gt;
+&lt;!-- ``` --&gt;
+
+---
+class: hide-logo
+# Ejecutar código
+
+- Una sola línea: colocar el  &lt;span style=" font-weight: bold;    border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #b3e2cd !important;" &gt;cursor sobre esa línea&lt;/span&gt; y ejecutar  &lt;span style=" font-weight: bold;    border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #b3e2cd !important;" &gt;Ctrl + ENTER&lt;/span&gt;.
+
+![](img/sendcode1.gif)
+
+---
+class: hide-logo
+# Ejecutar código
+
+- Varias líneas de código:  &lt;span style=" font-weight: bold;    border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #b3e2cd !important;" &gt;seleccionarlas todas&lt;/span&gt; y ejecutar  &lt;span style=" font-weight: bold;    border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #b3e2cd !important;" &gt;Ctrl + ENTER&lt;/span&gt;.
+
+![](img/sendcode2.gif)
+---
+# Atajos de teclado
+
+&lt;center&gt;
+&lt;img src="https://media.giphy.com/media/vpURqIvpuDguQ/source.gif&gt;
+&lt;/center&gt;
+
+&lt;!-- stack-overflow --&gt;
+
+
+&lt;!-- file.copy(from=origen, to=destino) --&gt;
+&lt;!-- file.remove(origen) --&gt;
+
+&lt;!-- unzip(destname, exdir=destino, junkpaths=TRUE) --&gt;
+
+
+&lt;!-- if (dim(e)==2){ --&gt;
+&lt;!--   stop("es necesario agregar errores nuevos al objeto errores_EP") --&gt;
+&lt;!-- } --&gt;
+
+---
+class: hide-logo
+# Flecha: atajo de teclado en Linux/Windows
+(teclado en español)
+
+![](img/linux_flecha.png)
+
+---
+class: hide-logo
+# Flecha: atajo de teclado en Mac 
+(teclado en español)
+
+![](img/mac_flecha.png)
+
+
+---
+# Atajos de teclado
+
+&lt;img src="img/teclas.png" width="544" height="100%" style="display: block; margin: auto;" /&gt;
+
+&lt;!-- ![](img/teclas.png) --&gt;
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9",
+"slideNumberFormat": "<div class=\"progress-bar-container\">   <div class=\"progress-bar\" style=\"width: calc(%current% / %total% * 100%);\">   </div> </div>"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
