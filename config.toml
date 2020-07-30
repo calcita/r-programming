@@ -9,7 +9,7 @@ enableInlineShortcodes = true
 footnoteReturnLinkContents = "^"
 disqusShortname = ""
 googleAnalytics = ""
-theme = "hugo-theme-tokiwa"
+theme = ""
 
 [markup.goldmark.renderer]
 unsafe= true
